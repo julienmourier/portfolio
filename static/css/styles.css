@@ -475,7 +475,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   transition: .5s;
 }
 
-.portfolio-item:hover .portfolio-logo, .portfolio-item:active .portfolio-logo
+.portfolio-item:hover .portfolio-logo, .portfolio-item:active .portfolio-logo,
 .portfolio-item:hover .portfolio-text, .portfolio-item:active .portfolio-text
 {
   opacity: 0;
@@ -529,7 +529,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 @media (min-width: 768px) {
   .portfolio-info p {text-align: justify;}
+  .portfolio-text span {display: none;}
 }
+
+
 
 /*** Experience ***/
 .experience {
@@ -770,4 +773,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   /* color: var(--primary); */
   color: #fff;
   font-size: 35px;
+}
+
+.contact-section a:active {
+  text-decoration: underline;
+}
+
+
+/*** Footer ***/
+.copyright-section a:active {
+  text-decoration: underline;
 }
