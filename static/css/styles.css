@@ -732,9 +732,55 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   overflow: hidden;
 }
 
-.experience .timeline-text:hover ul, .experience .timeline-text:active ul {
-  opacity: 1;
-  height: auto;
+/* but only on large screens */
+@media (min-width: 992px) {
+  .experience .timeline-text:hover ul {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+/* show a button on small screens */
+.experience-btn {
+  display: none;
+}
+
+/* creating a hidden checkbox to trigger the function
+(normally, should use JavaScript...) */
+#show-experience-1, #show-experience-2, #show-experience-3, #show-experience-4,
+#show-experience-5, #show-experience-6, #show-experience-7, #show-experience-8
+{display: none;}
+
+@media (max-width: 992px) {
+  .experience-btn {display: block;}
+  .timeline-date {
+    margin: 3px 0 0 0 !important;
+    width: auto !important;
+  }
+  .timeline-flex-date {
+    margin-bottom: 8px;
+  }
+  #show-experience-1:checked + label ul, #show-experience-2:checked + label ul,
+  #show-experience-3:checked + label ul, #show-experience-4:checked + label ul,
+  #show-experience-5:checked + label ul, #show-experience-6:checked + label ul,
+  #show-experience-7:checked + label ul, #show-experience-8:checked + label ul
+  {opacity: 1; height: auto;}
+
+  .experience .timeline .timeline-text {
+      padding: 30px 10px 30px 20px;
+  }
+}
+
+
+/* for very small screen */
+@media (max-width: 370px) {
+  .experience .timeline .timeline-text {
+    padding: 30px 5px 30px 5px !important;
+  }
+  .timeline-flex-date {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
 }
 
 
